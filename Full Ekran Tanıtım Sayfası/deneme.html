@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .mycontainerpresentation{
+            width: 100%;
+            height: 100vh;
+            background-color: #161616;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .mycontainerpresentation{
+            content: "";
+        }
+        .mycontainerpresentation .row{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .mycontainerpresentation .row .content{
+            width: 50%;
+            height: 500px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .mycontainerpresentation .row .presentation{
+            width: 50%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .mycontainerpresentation .row .content h1{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3rem;
+            line-height: 100px;
+        }
+        .mycontainerpresentation .row .content p{
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            line-height: 25px;
+            margin-bottom: 35px;
+        }   
+        .mycontainerpresentation .row .content .btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 20px;
+            background-color: #E0484B;
+            border-radius: 35px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: 1s all ease;
+            width: 150px;
+            text-align: center;
+        } 
+        .mycontainerpresentation .row .content .btn:hover{
+            background-color: #7a191b;
+        } 
+        /*******************************************************/
+
+        .mycontainerpresentation .row .presentation .circle-one img{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .mycontainerpresentation .row .presentation .circle-one{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            position: absolute;
+            top: 15%;
+            left: 25%;
+            width: 350px;
+            height: 350px;
+            background: transparent;
+            border: 3px solid #3c3c3c;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0, 0.5);
+            z-index: 20;
+            transition: all 1s ease;
+        }
+        .mycontainerpresentation .row .presentation .circle-one:before{
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid #fff12e;
+            border-right: 3px solid #fff12e;
+            box-shadow: 0 0 20px rgba(255 , 69, 0 ,0.5);
+            border-radius: 50%;            
+            z-index: -1;
+            animation: returnCircle 8s linear infinite;
+        }
+
+        @keyframes returnCircle{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .mycontainerpresentation .row .presentation .circle-two{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            position: absolute;
+            top: 5.5%;
+            left: 18.5%;
+            width: 450px;
+            height: 450px;
+            background: transparent;
+            border: 3px solid #3c3c3c;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0, 0.5);
+            z-index: 1;
+            transition: all 1s ease;
+        }
+        .mycontainerpresentation .row .presentation .circle-two:before{
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid #fff12e;
+            border-right: 3px solid #fff12e;
+            box-shadow: 0 0 20px rgba(255 , 69, 0 ,0.5);
+            border-radius: 50%;            
+            z-index: -1;
+            animation: returnCircle2 8s linear infinite;
+        }
+
+        @keyframes returnCircle2{
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        .mycontainerpresentation .row .presentation .circle-three{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            position: absolute;
+            top: -4.5%;
+            left: 12.5%;
+            width: 550px;
+            height: 550px;
+            background: transparent;
+            border: 3px solid #3c3c3c;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0, 0.5);
+            z-index: 1;
+            transition: all 1s ease;
+        }
+        .mycontainerpresentation .row .presentation .circle-three:before{
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid #fff12e;
+            border-right: 3px solid #fff12e;
+            box-shadow: 0 0 20px rgba(255 , 69, 0 ,0.5);
+            border-radius: 50%;            
+            z-index: -1;
+            animation: returnCircle3 8s linear infinite;
+        }
+
+        @keyframes returnCircle3{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="sectionpresentation">
+        <div class="mycontainerpresentation">
+            <div class="row">
+                <div class="content">
+                    <h1>Style Shoes.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis voluptatibus reiciendis
+                        neque, harum ab eius dolorem? Expedita veniam necessitatibus molestiae libero voluptate harum</p>
+                    <a href="#" class="btn">Explore Now</a>
+                </div>
+                <div class="presentation">
+                        <div class="circle-one">
+                            <img src="images/img2.png" alt="">
+                        </div>
+                        <div class="circle-two"></div>
+                        <div class="circle-three"></div>
+                        <div class="circle-for"></div>
+                        <div class="circle-five"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
